@@ -24,9 +24,21 @@
 <body>
     <h1>Majorca</h1>
     <h3>Imagine an island with turquoise blue waters, secret coves, soft golden sands, lush green foliage, rugged mountains, picturesque villages and a vibrant capital city. The island and its capital, Palma, are overflowing with character, while its beaches are famous all around the world, making it one of the most sought-after summer destinations.</h3>
-    <img src="images/majorca-waves-M.png" alt="Waves in Majorca">
-    <img src="images/majorca-beach-M.png" alt="Beach in Majorca">
-    <img src="images/majorca-cove-M.png" alt="Cove in Majorca">
+    <img srcset="
+        images/majorca-waves-S.png 320w,
+        images/majorca-waves-M.png 780w,
+        images/majorca-waves-L.png 1024w"
+    alt="Waves in Majorca">
+    <img srcset="
+        images/majorca-beach-S.png 320w,
+        images/majorca-beach-M.png 780w,
+        images/majorca-beach-L.png 1024w"
+    alt="Beach in Majorca">
+    <img srcset="
+        images/majorca-cove-S.png 320w,
+        images/majorca-cove-M.png 780w,
+        images/majorca-cove-L.png 1024w"
+    alt="Cove in Majorca">
 
     <br>
 
@@ -87,22 +99,38 @@
 
     <h2>Testimonials</h2>
         <h3>Miranda Blake</h3>
-        <img src="images/miranda-blake-M.png" alt="Photo of Miranda Blake">
+        <img srcset="
+            images/miranda-blake-S.png 320w,
+            images/miranda-blake-M.png 780w,
+            images/miranda-blake-L.png 1024w"
+            alt="Photo of Miranda Blake">
         <h4><b>Traveling From:</b> London, England</h4>
         <p>“I traveled here for business, but my stay was extended. Now it is my home.”</p>
 
         <h3>Max Winter</h3>
-        <img src="images/max-winter-M.png" alt="Photo of Max Winter">
+        <img srcset="
+            images/max-winter-S.png 320w,
+            images/max-winter-M.png 780w,
+            images/max-winter-L.png 1024w"
+            alt="Photo of Max Winter">
         <h4><b>Traveling From:</b> Berlin, Germany</h4>
         <p>“Great escape from my reality. Beautiful sunsets, wonderful people, great beer.”</p>
 
         <h3>Inés Villegoes</h3>
-        <img src="images/ines-villegoes-M.png" alt="Photo of Inés Villegoes">
+        <img srcset="
+            images/ines-villegoes-S.png 320w,
+            images/ines-villegoes-M.png 780w,
+            images/ines-villegoes-L.png 1024w"
+            alt="Photo of Inés Villegoes">
         <h4><b>Traveling From:</b> Barcelona, Spain</h4>
         <p>“A very safe environment for all travelers.”</p>
 
         <h3>Carmen Lorenzo</h3>
-        <img src="images/carmen-lorenzo-M.png" alt="Photo of Carmen Lorenzo">
+        <img srcset="
+            images/carmen-lorenzo-S.png 320w,
+            images/carmen-lorenzo-M.png 780w,
+            images/carmen-lorenzo-L.png 1024w"
+            alt="Photo of Carmen Lorenzo">
         <h4><b>Traveling From:</b> Madrid, Spain</h4>
         <p>“Live, laugh, love-- everything you need in Majorca.”</p>
     <br>
@@ -191,9 +219,12 @@
 			<option value="5">Flexible</option>
         </select>
         <!-- Submit button --> 
+        <br>
 		<input type="submit" name="submit" value="Submit">
     </form>
 </body>
+<br>
+<br>
 <footer>
     <p>Copyright 2021 Wunderlust</p>
     <p>Privacy Statement</p>
