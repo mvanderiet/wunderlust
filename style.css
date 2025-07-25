@@ -1,0 +1,18 @@
+.skipToMainContent {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skipToMainContent:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+.h1 {
+    color: blueviolet
+}
