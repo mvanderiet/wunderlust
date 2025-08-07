@@ -159,13 +159,22 @@ nav li {
     display: none;
 }
 
-#img-grid {
+#img-grid img {
+    padding-bottom: 20px;
+}
+
+#plan {
+    background-color: var(--yellow);
     display: grid;
     place-items: center;
 }
 
-#img-grid img {
-    padding-bottom: 20px;
+#plan section {  
+    display: grid;
+    place-items: center;
+    background-color: var(--teal);
+    margin-bottom: 10px;
+    border: 10px solid var(--white);
 }
 
 
@@ -186,6 +195,11 @@ nav li {
         height: auto;
     }
 
+    #img-grid {
+        display: grid;
+        place-items: center;
+    }
+
 }
 
 /* medium screen size */
@@ -203,6 +217,12 @@ nav li {
         max-width: 100%;
         height: auto;
     }
+    #img-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
 }
 
 /* large screen size */
@@ -220,6 +240,7 @@ nav li {
         max-width: 100%;
         height: auto;
     }
+    
 }
 
 /* extra large screen size */
@@ -233,6 +254,7 @@ nav li {
         padding-top: 5px;
         padding-bottom: 5px;
     }
+
     #intro picture {
         max-width: 100%;
         height: auto;
