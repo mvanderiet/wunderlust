@@ -174,7 +174,22 @@ nav li {
     place-items: center;
     background-color: var(--teal);
     margin-bottom: 10px;
-    border: 10px solid var(--white);
+    border: 5px solid var(--white);
+    border-radius: 25px;
+    width: 300px;
+    height: auto;
+}
+
+#plan h4 {
+    padding-bottom: 5px;
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+#plan img {
+    height: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 
