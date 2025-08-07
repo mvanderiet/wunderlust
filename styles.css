@@ -4,6 +4,19 @@
    License: none (public domain)
 */
 
+:root{
+    font-size: 20px;
+    --fonts: Molle, Montserrat;
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,7 +44,19 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    font-family: var(--fonts);
+    color: var(--dune);
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+
 }
+main, footer {
+    padding: 20px;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -46,4 +71,170 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* skip link styles from: https://webaim.org/techniques/css/invisiblecontent/ */
+#skip{
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+ 
+#skip:focus{
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+h1, h2, h3 {
+    font-family: "Molle", serif;
+}
+
+h4, p, q, small, nav, button, form {
+    font-family: "Montserrat", serif;
+}
+
+
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.17em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+p {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    line-height: 1.7;
+}
+
+header{
+    background-color: var(--teal);
+    padding: 20px;
+}
+
+nav {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: grid;
+}
+
+nav a{
+  text-decoration:none;
+  text-align: center;
+  /* padding: 1rem; */
+  margin: 1rem 0;
+  background-color: var(--teal);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 0.25rem;
+}
+nav li {
+  list-style:none;
+}
+
+#menuToggle input:checked ~ ul {
+    display: none;
+}
+
+.sr-only {
+    display: none;
+}
+
+#img-grid {
+    display: grid;
+    place-items: center;
+}
+
+#img-grid img {
+    padding-bottom: 20px;
+}
+
+
+
+/* small screen size */
+@media screen and (min-width: 320px){
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #intro picture {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
+/* medium screen size */
+@media screen and (min-width: 650px){
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #intro picture {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* large screen size */
+@media screen and (min-width: 980px){
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #intro picture {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* extra large screen size */
+@media screen and (min-width: 1250px){
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #intro picture {
+        max-width: 100%;
+        height: auto;
+    }
 }

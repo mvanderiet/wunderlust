@@ -40,12 +40,16 @@
             <h1>Wunderlust</h1>
 			<p>Let Wunderlust Travel help you plan the trip of your dreams!</p>			
             <nav>
-                <div id="menu-toggle">
+                <div id="menuToggle">
                     <!-- responsive menu code from (with changes made to match mockups): https://css-tricks.com/three-css-alternatives-to-javascript-navigation/ -->
                     <h2 class="sr-only">Main Navigation</h2>
                     <!-- hidden but accessible headings from: https://webaim.org/techniques/css/invisiblecontent/ -->
                     <input name="toggle" id="toggle" type="checkbox">
                     <label for="toggle">Menu</label>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        </label>
                     <ul>
                         <li class="active"><a href="#">Destinations</a></li>
                         <li><a href="#">Inspirations</a></li>
@@ -63,10 +67,16 @@
                     <div id="img-grid">
                         <img src="images/majorca-waves.png" alt="Turquoise blue waters with white wave caps crashing against a rock cliff">
                         <img src="images/majorca-beach.png" alt="A calm cove with turquoise waters calmly lapping at a light sand beach">
-                        <picture>
+                        <!-- <picture>
                             <source srcset="images/majorca-cove-small.png"
                                 media="(max-width: 500px)">
                             <img src="images/majorca-cove.png" alt="Deep blue water leading to the horizon with the island and trees in the foreground">
+                        </picture> -->
+                        <picture>
+                            <source srcset="images/majorca-cove-L.png" media="(min-width: 980px)">
+                            <source srcset="images/majorca-cove-M.png" media="(min-width: 650px)">
+                            <source srcset="images/majorca-cove-S.png" media="(min-width: 320px)">
+                            <img src="images/majorca-cove-S.png" alt="Cove in Majorca">
                         </picture>
                     </div>
                 </div>  
