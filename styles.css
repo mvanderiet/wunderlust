@@ -16,8 +16,6 @@
     --light-gray: #EAEAEA;
     --white: #FFFFFF;
     --black: #000000;
-    --green: green;
-
 }
 
 html, body, div, span, applet, object, iframe,
@@ -105,8 +103,6 @@ h4, p, q, small, nav, button, form {
     font-family: "Montserrat", serif;
 }
 
-
-
 h1 {
     font-size: 2em;
 }
@@ -141,8 +137,6 @@ header{
     padding: 20px;
 }
 
-
-
 #menuToggle input:checked ~ ul {
     display: none;
 }
@@ -151,10 +145,12 @@ header{
     display: none;
 }
 
+/* Majorca images */
 #img-grid img {
     padding-bottom: 20px;
 }
 
+/* Plan Your Trip section */
 #plan {
     background-color: var(--yellow);
     display: grid;
@@ -168,7 +164,7 @@ header{
     background-color: var(--teal);
     margin-bottom: 10px;
     border: 5px solid var(--white);
-    border-radius: 25px;
+    border-radius: 10px;
     width: 300px;
     height: auto;
 }
@@ -177,24 +173,10 @@ header{
     font-size: 40px;
 }
 
-#PYT {
+#planYourTripHeading {
     background-color: var(--yellow);
     font-size: 40px;
-    padding-left: 30px;
-    padding-top: 20px;
-}
-
-#testHead {
-    background-color: var(--white);
-    font-size: 40px;
-    padding-left: 30px;
-    padding-top: 20px;
-}
-
-#AYD {
-    background-color: var(--blue);
-    font-size: 40px;
-    padding-left: 30px;
+    padding-left: 60px;
     padding-top: 20px;
 }
 
@@ -210,13 +192,22 @@ header{
     padding-bottom: 20px;
 }
 
+/* Testimonials section */
 #testimonials {
     background-color: var(--white);
     display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
     grid-column-start: 1;
     grid-column-end: -1;
 }
 
+#testimonialsHeading {
+    background-color: var(--white);
+    font-size: 40px;
+    padding-left: 30px;
+    padding-top: 20px;
+}
 
 #testimonials h3 {
     padding-top: 30px;
@@ -233,15 +224,11 @@ header{
 q {
     font-style: italic;
     font-size: 25px;
-    /* padding-left: 40px;
-    padding-right: 40px; */
     text-align: center;
     padding-bottom: 15px;
 }
 
-
-
-
+/* Contact Form section */
 .form-required {
     font-family: "Montserrat", serif;
     font-size: 20px;
@@ -254,11 +241,6 @@ q {
 
 .radio-input{
   accent-color: var(--purple); 
-  
-}
-
-#contact #names {
-    display: grid;
 }
 
 #contact #names input::placeholder, 
@@ -312,6 +294,7 @@ q {
     padding-bottom: 20px;
 }
 
+/* Footer section */
 footer {
     display: grid;
     background-color: var(--light-gray);
@@ -328,22 +311,19 @@ footer a {
     margin-top: 20px;
 }
 
-
-
-/* .aboutContainer > div {
-  background-color: #f1f1f1;
-  color: #000;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center; 
-  width: 50%;
-} */
-
+/* About section */
 #about {   
         padding: 20px 20px 20px 20px;
         background-color: var(--blue); 
         display: grid;
         place-items: center;
+}
+
+#aboutYourDestinationHeading {
+    background-color: var(--blue);
+    font-size: 40px;
+    padding-left: 30px;
+    padding-top: 20px;
 }
 
 #about img {
@@ -376,6 +356,7 @@ footer a {
         padding-top: 5px;
         padding-bottom: 5px;
     }
+/* Majorca images (small screen) */
     #intro picture {
         max-width: 100%;
         height: auto;
@@ -385,7 +366,7 @@ footer a {
         display: grid;
         place-items: center;
     }
-
+/* Navigation Menu (small screens) */
     nav {
         grid-column-start: 1;
         grid-column-end: -1;
@@ -407,12 +388,14 @@ footer a {
     nav li {
         list-style:none;
     }
+/* Testimonials (small screens) */
     #testimonials div {
         display: grid;
         place-items: center;
         text-align: center;
         max-width: 100%;
     }
+/* About section (small screens) */
     #about {   
         grid-template-columns: 1fr 1fr;
     }
@@ -429,6 +412,7 @@ footer a {
         padding-top: 5px;
         padding-bottom: 5px;
     }
+    /* Majorca images (medium screen) */
     #intro picture {
         height: auto;
         text-align: center;
@@ -446,6 +430,7 @@ footer a {
         flex-wrap: wrap;
         justify-content: center;
     }
+    /* Header (medium screen) */
     header {
         display: grid;   
     }
@@ -457,7 +442,6 @@ footer a {
         grid-auto-rows: minmax(100px, auto);
         padding-top: 20px;
     }
-
     .logo {
         grid-column: 1;
         grid-row: 1;
@@ -467,7 +451,7 @@ footer a {
         grid-column: 2 / 5;
         grid-row: 1;
     }
-
+/* Nav menu (medium screen) */
     .navMenu {
         grid-column: 1 / 5;
         grid-row: 2;
@@ -504,6 +488,7 @@ footer a {
     nav li:hover {
         background-color: var(--yellow);
     }
+    /* Plan Your Trip section (medium screen) */
     #plan {
         background-color: var(--yellow);
         display: grid;
@@ -519,11 +504,10 @@ footer a {
         background-color: var(--teal);
         margin-bottom: 10px;
         border: 5px solid var(--white);
-        border-radius: 25px;
         width: 300px;
         height: auto;
-        
     }
+    /* Testimonials section (medium screen) */
     #testimonials {
         grid-template-columns: 1fr 1fr;
         margin-left: 20px;
@@ -534,6 +518,7 @@ footer a {
         text-align: center;
         max-width: 50%;
     }
+    /* About section (medium screen) */
     #about {   
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -550,10 +535,19 @@ footer a {
         padding-top: 5px;
         padding-bottom: 5px;
     }
+    /* Intro section (large screen) */
+    #intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 30px;
+    }
     #intro picture {
         max-width: 100%;
         height: auto;
     }
+    /* Header (large screen) */
     header {
         display: grid;
         padding-left: 0px;
@@ -576,6 +570,7 @@ footer a {
         grid-column: 2 / 8;
         grid-row: 1;
     }
+    /* Nav menu (large screen) */
     .navMenu {
         position: absolute; 
         top: 0;
@@ -593,22 +588,46 @@ footer a {
         width: 100px;
 
     }
-}
-/* 
-/* extra large screen size */
-@media screen and (min-width: 1250px){
-    h1 {
-        font-size: 2em;
+    /* Plan Your Trip section (large screen) */
+    #plan {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 250px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
-
-    h2 {
-        font-size: 1.5em;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-
-    #intro picture {
-        max-width: 100%;
+    #plan div {  
+        width: 220px;
         height: auto;
     }
-} */
+    #plan img {
+        height: 75px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    /* Testimonials (large screen) */
+    #testimonials {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: space-evenly;
+        margin-right: 50px;
+    }
+    /* Contact Form (large screen) */
+    #contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #contact #names {
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+    #contact #nums {
+        grid-column: 2 / 3;
+        grid-row: 1;
+    }
+    #contact #selects {
+        grid-column: 3 / 3;
+        grid-row: 1;
+    }
+    #contact div {
+        display: grid;
+    }
+}
