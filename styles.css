@@ -16,6 +16,8 @@
     --light-gray: #EAEAEA;
     --white: #FFFFFF;
     --black: #000000;
+    --green: green;
+
 }
 
 html, body, div, span, applet, object, iframe,
@@ -139,26 +141,7 @@ header{
     padding: 20px;
 }
 
-nav {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  display: grid;
-}
 
-nav a{
-  text-decoration:none;
-  text-align: center;
-  /* padding: 1rem; */
-  margin: 1rem 0;
-  background-color: var(--teal);
-  color: var(--white);
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 0.25rem;
-}
-nav li {
-  list-style:none;
-}
 
 #menuToggle input:checked ~ ul {
     display: none;
@@ -177,10 +160,9 @@ nav li {
     display: grid;
     place-items: center;
     padding-bottom: 30px;
-    padding-top: 20px;
 }
 
-#plan section {  
+#plan div {  
     display: grid;
     place-items: center;
     background-color: var(--teal);
@@ -193,6 +175,27 @@ nav li {
 
 #plan h3, #testimonials h3, #contact h3 {
     font-size: 40px;
+}
+
+#PYT {
+    background-color: var(--yellow);
+    font-size: 40px;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+#testHead {
+    background-color: var(--white);
+    font-size: 40px;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+#AYD {
+    background-color: var(--blue);
+    font-size: 40px;
+    padding-left: 30px;
+    padding-top: 20px;
 }
 
 #plan h4 {
@@ -210,13 +213,10 @@ nav li {
 #testimonials {
     background-color: var(--white);
     display: grid;
+    grid-column-start: 1;
+    grid-column-end: -1;
 }
 
-#testimonials section {
-    display: grid;
-    place-items: center;
-    text-align: center;
-}
 
 #testimonials h3 {
     padding-top: 30px;
@@ -233,23 +233,14 @@ nav li {
 q {
     font-style: italic;
     font-size: 25px;
-    padding-left: 40px;
-    padding-right: 40px;
+    /* padding-left: 40px;
+    padding-right: 40px; */
     text-align: center;
     padding-bottom: 15px;
 }
 
-.aboutContainer {
-       
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
 
-#about {   
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: var(--blue); 
-}
+
 
 .form-required {
     font-family: "Montserrat", serif;
@@ -348,16 +339,34 @@ footer a {
   width: 50%;
 } */
 
+#about {   
+        padding: 20px 20px 20px 20px;
+        background-color: var(--blue); 
+        display: grid;
+        place-items: center;
+}
+
 #about img {
-    height: 100px;
-    /* padding-top: 20px;
-    padding-bottom: 20px; */
+    height: 80px;
+    
+    /* padding-top: 20px; */
+    padding-bottom: 20px;
+}
+
+#about h4 {
+    font-weight: bold;
+}
+
+#about div {
+    display: grid;
+    place-items: center;
+    font-size: 16px;
 }
 
 
 
 /* small screen size */
-@media screen and (min-width: 320px){
+@media screen and (max-width: 649px){
     h1 {
         font-size: 2.5em;
     }
@@ -377,8 +386,36 @@ footer a {
         place-items: center;
     }
 
-    
+    nav {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        display: grid;
+        background-color: var(--teal);
+    }
 
+    nav a{
+        text-decoration:none;
+        text-align: center;
+        /* padding: 1rem; */
+        margin: 1rem 0;
+        
+        color: var(--white);
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 0.25rem;
+    }
+    nav li {
+        list-style:none;
+    }
+    #testimonials div {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+    #about {   
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* medium screen size */
@@ -393,15 +430,90 @@ footer a {
         padding-bottom: 5px;
     }
     #intro picture {
-        max-width: 100%;
         height: auto;
+        text-align: center;
+    }
+
+    #intro picture img {
+        max-width: 100%;
+    }
+    #intro img {
+        max-width: 45%;
+        padding-left: 15px;
     }
     #img-grid {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
+    header {
+        display: grid;
+        
+    }
     
+    nav {
+        background-color: var(--teal);
+        display: flex;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        justify-content: center;
+    }
+
+    nav a{
+        text-decoration:none;
+        text-align: center;
+        /* padding: 1rem; */
+        margin: 1rem 0;
+        
+        color: var(--black);
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 0.25rem;
+    }
+    nav li {
+        list-style-type: none;
+        padding: 5px;
+        margin: 10px;
+        float: left;
+        background-color: var(--white);
+    }
+
+    nav li:hover {
+        background-color: var(--yellow);
+    }
+    #plan {
+        background-color: var(--yellow);
+        display: grid;
+        place-items: center;
+        padding-bottom: 30px;
+        grid-template-columns: 1fr 1fr;
+        height: 600px;
+    }
+
+    #plan div {  
+        display: grid;
+        place-items: center;
+        background-color: var(--teal);
+        margin-bottom: 10px;
+        border: 5px solid var(--white);
+        border-radius: 25px;
+        width: 300px;
+        height: auto;
+        
+    }
+    #testimonials {
+        grid-template-columns: 1fr 1fr;
+        margin-left: 20px;
+    }
+    #testimonials div {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        max-width: 50%;
+    }
+    #about {   
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
 /* large screen size */
@@ -418,6 +530,9 @@ footer a {
     #intro picture {
         max-width: 100%;
         height: auto;
+    }
+    nav {
+        background-color: var(--green);
     }
     
 }
