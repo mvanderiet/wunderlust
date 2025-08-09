@@ -133,7 +133,7 @@ p {
 }
 
 header{
-    background-color: var(--teal);
+    background-image: linear-gradient(var(--teal), var(--white));
     padding: 20px;
 }
 
@@ -148,6 +148,7 @@ header{
 /* Majorca images */
 #img-grid img {
     padding-bottom: 20px;
+    width: 100%;
 }
 
 /* Plan Your Trip section */
@@ -169,7 +170,7 @@ header{
     height: auto;
 }
 
-#plan h3, #testimonials h3, #contact h3 {
+#plan h3, #testimonials h3, #contactUsHeading {
     font-size: 40px;
 }
 
@@ -196,7 +197,7 @@ header{
 #testimonials {
     background-color: var(--white);
     display: grid;
-    place-items: center;
+    /* place-items: center; */
     grid-template-columns: 1fr 1fr;
     grid-column-start: 1;
     grid-column-end: -1;
@@ -241,6 +242,19 @@ q {
 
 .radio-input{
   accent-color: var(--purple); 
+  display: inline-flex;
+}
+
+#contactUsHeading{
+    padding-left: 30px;
+}
+
+#contact {
+    padding-left: 30px;
+}
+
+#contact div {
+    display: grid;
 }
 
 #contact #names input::placeholder, 
@@ -260,13 +274,7 @@ q {
 #contact #names label, #contact #nums legend, 
 #contact #nums label, #contact #nums #info label, 
 #contact #selects label {
-    padding-bottom: 5px;
-    padding-top: 15px;
-}
-
-#contact #nums {
-    display: grid;
-    justify-content: left;
+    padding-top: 5px;
 }
 
 #contact #nums #info input{
@@ -275,7 +283,7 @@ q {
 }
 
 #contact #nums fieldset {
-    display: block;
+    display: grid;
     margin-bottom: 10px;
 }
 
@@ -367,37 +375,85 @@ footer a {
         place-items: center;
     }
 /* Navigation Menu (small screens) */
+    #menuToggle input:checked ~ ul {
+        display: grid;
+        position: absolute;
+        background-color: var(--teal);
+        color: var(--black);
+    }
+    #menuToggle input:checked ~ ul li {
+        height: 40px;
+        width: 150px;
+    }
+    #menuToggle input:not(:checked) ~ ul {
+        display: none;
+    }
+
     nav {
         grid-column-start: 1;
         grid-column-end: -1;
         display: grid;
-        background-color: var(--teal);
     }
-
+    .navMenu {
+        position: absolute; 
+        top: 20px;
+        right: 0;
+        background-color: var(--yellow);
+        width: 150px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
     nav a{
         text-decoration:none;
         text-align: center;
-        /* padding: 1rem; */
         margin: 1rem 0;
-        
-        color: var(--white);
+        color: var(--black);
         font-size: 16px;
         font-weight: bold;
         border-radius: 0.25rem;
     }
     nav li {
         list-style:none;
+        padding-top: 10px;
+        border: 1px solid var(--black);
     }
-/* Testimonials (small screens) */
+/* Plan Yout Trip section (small screen) */
+    #planYourTripHeading {
+        background-color: var(--yellow);
+        font-size: 40px;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    #plan div {  
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 80%;
+        height: auto;
+    }
+    #plan a {
+        text-align: center;
+    }
+    #plan img {
+        width: 75%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    /* Testimonials (small screens) */
+    #testimonials {
+        grid-template-columns: 1fr;
+    }
     #testimonials div {
         display: grid;
         place-items: center;
         text-align: center;
         max-width: 100%;
     }
-/* About section (small screens) */
+    /* About section (small screens) */
     #about {   
         grid-template-columns: 1fr 1fr;
+        padding: unset;
     }
 }
 
@@ -417,7 +473,6 @@ footer a {
         height: auto;
         text-align: center;
     }
-
     #intro picture img {
         max-width: 100%;
     }
@@ -434,6 +489,9 @@ footer a {
     header {
         display: grid;   
     }
+    #menuToggle input:not(:checked) ~ label {
+        display: none;
+    }
     .wrapper {
         display: grid;
         max-width: 940px;
@@ -446,7 +504,6 @@ footer a {
         grid-column: 1;
         grid-row: 1;
     }
-
     .wunderlustHeading {
         grid-column: 2 / 5;
         grid-row: 1;
@@ -458,7 +515,6 @@ footer a {
     }
     
     nav {
-        background-color: var(--teal);
         display: flex;
         grid-column-start: 1;
         grid-column-end: -1;
@@ -504,13 +560,13 @@ footer a {
         background-color: var(--teal);
         margin-bottom: 10px;
         border: 5px solid var(--white);
-        width: 300px;
+        width: 90%;
         height: auto;
     }
     /* Testimonials section (medium screen) */
     #testimonials {
         grid-template-columns: 1fr 1fr;
-        margin-left: 20px;
+        place-items: center;
     }
     #testimonials div {
         display: grid;
@@ -522,6 +578,11 @@ footer a {
     #about {   
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    #contact #selects #mySubmit {
+        position: relative;
+        width: 30%;
+        left: 70%;
 }
 
 /* large screen size */
@@ -596,7 +657,7 @@ footer a {
         padding-right: 50px;
     }
     #plan div {  
-        width: 220px;
+        width: 200px;
         height: auto;
     }
     #plan img {
@@ -607,27 +668,40 @@ footer a {
     /* Testimonials (large screen) */
     #testimonials {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        justify-content: space-evenly;
-        margin-right: 50px;
+        text-align: center;
+        height: 100%;
+        place-items: unset;
+        padding-left: 30px;
     }
     /* Contact Form (large screen) */
-    #contact {
+    #contact form {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
     #contact #names {
         grid-column: 1 / 2;
         grid-row: 1;
+        width: 90%;
+        grid-template-rows: 1fr 1fr 1fr;
     }
     #contact #nums {
+        display: grid;
         grid-column: 2 / 3;
         grid-row: 1;
+        width: 90%;
+        grid-template-rows: 1fr 1fr 1fr;
     }
     #contact #selects {
         grid-column: 3 / 3;
         grid-row: 1;
+        width: 90%;
+        grid-template-rows: 1fr 1fr 1fr;
     }
-    #contact div {
-        display: grid;
+    #contact #selects #mySubmit {
+        position: absolute;
+        right: 0;
+        width: 12%;
+        margin-right: 55px;
+        left: unset;
     }
 }
